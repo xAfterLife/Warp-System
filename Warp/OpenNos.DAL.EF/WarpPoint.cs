@@ -30,6 +30,7 @@ namespace OpenNos.DAL.EF
         public AuthorityType Authority { get; set; }
 
         public virtual Map Map { get; set; }
+        
         public short MapId { get; set; }
 
         public short MapX { get; set; }
