@@ -14,7 +14,6 @@ namespace OpenNos.Mapper.Mappers
                 return false;
             }
 
-            output.Index = input.Index;
             output.Name = input.Name;
             output.MapId = input.MapId;
             output.MapX = input.MapX;
@@ -32,7 +31,6 @@ namespace OpenNos.Mapper.Mappers
                 return false;
             }
 
-            output.Index = input.Index;
             output.Name = input.Name;
             output.MapId = input.MapId;
             output.MapX = input.MapX;
