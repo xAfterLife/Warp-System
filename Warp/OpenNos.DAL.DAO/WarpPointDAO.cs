@@ -74,7 +74,7 @@ namespace OpenNos.DAL.DAO
                 using (OpenNosContext context = DataAccessHelper.CreateContext())
                 {
                     WarpPointDTO dto = new WarpPointDTO();
-                    if (Mapper.Mappers.WarpPointMapper.ToWarpPointDTO(context.WarpPoint.FirstOrDefault(i => i.Index.Equals(warppointID)), dto))
+                    if (Mapper.Mappers.WarpPointMapper.ToWarpPointDTO(context.WarpPoint.FirstOrDefault(i => i.WarpPointID.Equals(warppointID)), dto))
                     {
                         return dto;
                     }
