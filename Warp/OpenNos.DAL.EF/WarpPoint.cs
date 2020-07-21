@@ -22,7 +22,7 @@ namespace OpenNos.DAL.EF
     public class WarpPoint
     {
         #region Properties
-        public short Index { get; set; }
+        public short WarpPointID { get; set; }
 
         [MaxLength(255)]
         public string Name { get; set; }
@@ -37,8 +37,6 @@ namespace OpenNos.DAL.EF
         public short MapY { get; set; }
 
         public bool IsInstance { get; set; }
-
-        public short WarpPointID { get; set; }
 
         #endregion
     }
