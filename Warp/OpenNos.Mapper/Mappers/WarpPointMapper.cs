@@ -14,6 +14,7 @@ namespace OpenNos.Mapper.Mappers
                 return false;
             }
 
+            output.WarpPointID = input.WarpPointID;
             output.Name = input.Name;
             output.MapId = input.MapId;
             output.MapX = input.MapX;
@@ -31,6 +32,7 @@ namespace OpenNos.Mapper.Mappers
                 return false;
             }
 
+            output.WarpPointID = input.WarpPointID;
             output.Name = input.Name;
             output.MapId = input.MapId;
             output.MapX = input.MapX;
