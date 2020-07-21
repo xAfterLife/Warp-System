@@ -8,7 +8,7 @@ namespace OpenNos.Data
     {
         #region Properties
 
-        public short Index { get; set; }
+        public short WarpPointID { get; set; }
 
         public string Name { get; set; }
 
