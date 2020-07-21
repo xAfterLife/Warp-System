@@ -1,4 +1,4 @@
-        /// <summary>
+ /// <summary>
         /// $WarpPoints Command
         /// </summary>
         /// <param name="warpPointsPacket"></param>
@@ -29,13 +29,18 @@
                 }
 
                 WarpPointDTO warpPoint = DAOFactory.WarpPointDAO.LoadFromName(warpPacket.WarpPoint).FirstOrDefault();
-                if (warpPoint != null && warpPoint.Authority <= Session.Account.Authority)
+                if (warpPoint != null)
                 {
+                    if (warpPoint.Authority > Session.Account.Authority)
+                    {
+                        Session.SendPacket(Session.Character.GenerateSay(string.Format("You need the Authority of {0}", Enum.GetName(typeof(AuthorityType), warpPoint.Authority)), 11));
+                        return;
+                    }
                     if (warpPoint.IsInstance)
                     {
-                        if(Session.Character.Group != null)
+                        if (Session.Character.Group != null)
                         {
-                            client = Session.Character.Group.Sessions.Where(x => x.CurrentMapInstance.Map.MapId == warpPoint.MapId && x.Character.MapInstanceId != null).FirstOrDefault();
+                            client = Session.Character.Group.Sessions.Where(x => x.CurrentMapInstance.Map.MapId == warpPoint.MapId && x.Character.MapInstanceId != null && x.Character.MapInstance.MapInstanceType != MapInstanceType.BaseMapInstance).FirstOrDefault();
                         }
                         if (client != null)
                         {
