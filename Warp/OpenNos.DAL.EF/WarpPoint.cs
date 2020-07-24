@@ -37,8 +37,6 @@ namespace OpenNos.DAL.EF
 
         public short MapY { get; set; }
 
-        public bool IsInstance { get; set; }
-
         #endregion
     }
 }
