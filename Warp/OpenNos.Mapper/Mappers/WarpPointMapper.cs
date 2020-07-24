@@ -20,7 +20,6 @@ namespace OpenNos.Mapper.Mappers
             output.MapX = input.MapX;
             output.MapY = input.MapY;
             output.Authority = input.Authority;
-            output.IsInstance = input.IsInstance;
 
             return true;
         }
@@ -38,7 +37,6 @@ namespace OpenNos.Mapper.Mappers
             output.MapX = input.MapX;
             output.MapY = input.MapY;
             output.Authority = input.Authority;
-            output.IsInstance = input.IsInstance;
 
             return true;
         }
