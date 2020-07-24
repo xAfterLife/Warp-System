@@ -20,8 +20,6 @@ namespace OpenNos.Data
 
         public short MapY { get; set; }
 
-        public bool IsInstance { get; set; }
-
         #endregion
     }
 }
