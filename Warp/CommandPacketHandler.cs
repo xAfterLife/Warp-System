@@ -46,4 +46,3 @@
             ServerManager.Instance.ChangeMap(Session.Character.CharacterId, warpPoint.MapId, warpPoint.MapX, warpPoint.MapY);
             Session.SendPacket(Session.Character.GenerateSay("Warp complete", 12));
         }
-
