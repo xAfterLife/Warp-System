@@ -13,7 +13,7 @@
             Session.SendPacket(Session.Character.GenerateSay("-------", 10));
         }
 
-		      /// <summary>
+		/// <summary>
         /// $Warp Command
         /// </summary>
         /// <param name="warpPacket"></param>
@@ -34,10 +34,10 @@
             if (warpPoint == null)
             {
                 Session.SendPacket(Session.Character.GenerateSay("Your requested WarpPoint doesn't exist", 11));
-				            return;
+				return;
             }
             
-			         if (warpPoint.Authority > Session.Account.Authority)
+			if (warpPoint.Authority > Session.Account.Authority)
             {
                 Session.SendPacket(Session.Character.GenerateSay(string.Format("You need the Authority of {0}", Enum.GetName(typeof(AuthorityType), warpPoint.Authority)), 11));
                 return;
